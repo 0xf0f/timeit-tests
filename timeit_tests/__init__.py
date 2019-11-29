@@ -1,5 +1,4 @@
 from timeit import timeit
-from functools import partial
 
 
 def ordinal(n, suffix='.'):
@@ -15,7 +14,7 @@ def ordinal(n, suffix='.'):
 
 
 def run_tests(
-        test=partial(timeit, number=1000),
+        test=timeit,
         ranked=True,
         **tests
 ):
